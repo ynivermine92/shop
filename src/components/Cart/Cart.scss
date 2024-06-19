@@ -1,0 +1,82 @@
+.cart {
+    z-index: 2;
+    position: fixed;
+    background-color: rgb(10, 10, 217);
+    right: 20px;
+    top: 100px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1),
+    0px 10px 10px 0px rgba(0, 0, 0, 0.09), 0px 22px 13px 0px rgba(0, 0, 0, 0.05),
+    0px 39px 16px 0px rgba(0, 0, 0, 0.01), 0px 61px 17px 0px rgba(0, 0, 0, 0);
+    &__icon {
+        position: absolute;
+        left: 10px;
+        color: #ffff;
+    }
+
+    &__sum {
+        display: block;
+        font-size: 20px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 12px;
+        color: #ffff;
+ 
+    }
+}
+
+
+
+
+// ************************ Модальное окно ************************ //
+.cart__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    display: none;
+
+    .cart {
+        background: white;
+        padding: 25px;
+        border-radius: 5px;
+        height: 350px;
+        width: 300px;
+
+        &__title {
+            text-align: center;
+        }
+        &__body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        &__close {
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+// ************************ Кнопка вызова модального окна ************************ //
+.cart__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
