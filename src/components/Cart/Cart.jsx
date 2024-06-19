@@ -32,7 +32,9 @@ const Cart = ({ order }) => {
     };
 
     return (
-        <div className='cart'>
+        <div className='cart' onClick={opencart}>
+            <i className="large material-icons cart__icon">shopping_cart</i>
+            <span className='cart__sum'>{order}</span>
             <div className="cart__wrapper" style={cartWrapperStyle}>
                 <div className="cart">
                     <div className="cart__close" onClick={closecart}>
@@ -42,10 +44,6 @@ const Cart = ({ order }) => {
                     <div className="cart__body">Содержимое модального окна</div>
                 </div>
             </div>
-            <button className="btn cart__btn" onClick={opencart}>
-                <i className="large material-icons cart__icon">shopping_cart</i>
-                <span className='cart__sum'>{order}</span>
-            </button>
         </div>
     )
 }
