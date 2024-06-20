@@ -1,4 +1,4 @@
-.cart {
+.basket {
     z-index: 2;
     position: fixed;
     background-color: rgb(10, 10, 217);
@@ -10,8 +10,9 @@
     display: flex;
     align-items: center;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1),
-    0px 10px 10px 0px rgba(0, 0, 0, 0.09), 0px 22px 13px 0px rgba(0, 0, 0, 0.05),
-    0px 39px 16px 0px rgba(0, 0, 0, 0.01), 0px 61px 17px 0px rgba(0, 0, 0, 0);
+        0px 10px 10px 0px rgba(0, 0, 0, 0.09), 0px 22px 13px 0px rgba(0, 0, 0, 0.05),
+        0px 39px 16px 0px rgba(0, 0, 0, 0.01), 0px 61px 17px 0px rgba(0, 0, 0, 0);
+
     &__icon {
         position: absolute;
         left: 10px;
@@ -26,14 +27,20 @@
         bottom: 10px;
         font-size: 12px;
         color: #ffff;
- 
+
     }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
 }
 
 
-
-
-// ************************ Модальное окно ************************ //
 .cart__wrapper {
     position: fixed;
     left: 0;
@@ -48,35 +55,44 @@
     display: none;
 
     .cart {
+        position: relative;
         background: white;
         padding: 25px;
         border-radius: 5px;
-        height: 350px;
-        width: 300px;
+        min-height: 250px;
+        width: 80%;
 
         &__title {
+            padding-top: 20px;
             text-align: center;
         }
+
         &__body {
+            padding-top: 20px;
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100%;
         }
 
         &__close {
+            position: absolute;
+            right: 30px;
             cursor: pointer;
             display: flex;
             justify-content: flex-end;
+            width: 25px;
+            height: 25px;
+        }
+        &__items{
+            width: 100%;
+        }
+        &__item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__item-image{
+            height: 140px;
+            width: 150px;
         }
     }
-}
-
-// ************************ Кнопка вызова модального окна ************************ //
-.cart__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    cursor: pointer;
 }
